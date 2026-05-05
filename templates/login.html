@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/reset.css')  }}"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/dog0.jpg')  }}"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css')  }}"
+    />
+    <title>Dog News-Login</title>
+  </head>
+  <body>
+    <header id="titulo">
+      <figure>
+        <img
+          src="{{ url_for('static', filename='img/dog0.jpg')  }}"
+          width="100"
+        />
+      </figure>
+      <h1>Dog news</h1>
+    </header>
+
+    <nav>
+      <a href="{{ url_for('home.home') }}">Home </a>
+      <a
+        href="https://github.com/EduardoPoc/Dog-News"
+        target="_blank"
+        rel="noopener"
+        >GitHub
+      </a>
+    </nav>
+    <main>
+      <div id="corpoLogin">
+        <section>
+          <h2>Login</h2>
+          <form class="d-flex justify-content-center align-items-center">
+            <div class="p-4">
+              <div class="mb-3">
+                <label for="usuario" class="form-label">Usuário</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="usuario"
+                  name="usuario"
+                  placeholder="Digite seu usuário"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="senha"
+                  name="senha"
+                  placeholder="Digite sua senha"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">
+                Entrar
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+      <aside></aside>
+    </main>
+  </body>
+</html>

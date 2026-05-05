@@ -3,20 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>Dog News</title>
-    <link rel="shortcut icon" href="img/dog0.jpg" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/dog0.jpg')  }}"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css')  }}"
+    />
   </head>
   <body>
     <header id="titulo">
       <figure>
-        <img src="img/dog0.jpg" width="100" />
+        <img
+          src="{{ url_for('static', filename='img/dog0.jpg')  }}"
+          width="100"
+        />
       </figure>
       <h1>Dog news</h1>
     </header>
 
     <nav>
-      <a href="#corpo">Noticias sobre cachorros </a>
+      <a href="{{ url_for('login.login') }}">Login </a>
       <a
         href="https://github.com/EduardoPoc/Dog-News"
         target="_blank"
@@ -25,36 +41,41 @@
       </a>
     </nav>
     <main>
-      <div id="corpo">
+      <div id="corpoIndex">
         <section><h2>Hot News</h2></section>
-        <article>
+        <article id="indexArticle">
           <figure>
-            <img src="img/dog1.jpeg" width="100" />
+            <img
+              src="{{ url_for('static', filename='img/dog1.jpeg')  }}"
+              width="100"
+            />
           </figure>
           <div>
             <h3>Cachorro ganha pirulito</h3>
             <p>
               Cachorrinho ganha pirulito de uma cachorrinha e vira famoso na
-              escola. <a href="#corpo">Veja mais.</a>
+              escola. <a href="#corpoIndex">Veja mais.</a>
             </p>
           </div>
         </article>
         <article>
           <figure>
-            <img src="img/dog0.jpg" width="100" />
+            <img
+              src="{{ url_for('static', filename='img/dog0.jpg')  }}"
+              width="100"
+            />
           </figure>
           <div>
             <h3>Cachorro ganha chapéu de hélice</h3>
             <p>
               Cachorrinho ganha chapéu de hélice e fica muito mais feliz.
-              <a href="#corpo">Veja mais.</a>
+              <a href="#corpoIndex">Veja mais.</a>
             </p>
           </div>
         </article>
       </div>
       <aside>
-        <br />
-        <a href="#corpo">Veja mais noticias sobre Doginhos.</a>
+        <a href="#corpoIndex">Veja mais noticias sobre Doginhos.</a>
       </aside>
     </main>
     <footer>
@@ -75,5 +96,10 @@
         >
       </div>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
